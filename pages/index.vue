@@ -17,7 +17,7 @@
           👋 <br />
           Hi, i'm a developer and
           <span class="font-medium">photographer</span> based in
-          <span class="font-medium">Rome</span>
+          <span class="font-medium">RomeP</span>
         </p>
         <p class="w-1/3" data-scroll-speed="2">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra
