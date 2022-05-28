@@ -12,7 +12,7 @@
         <p
           class="font-light text-8xl w-2/3 serif"
           data-scroll
-          data-scroll-speed="3"
+          data-scroll-speed="3" data-cursor-hover color-hover="#FFFFFF"
         >
           👋 <br />
           Hi, i'm a developer and
@@ -55,7 +55,7 @@
                 <p class="font-bold text-lg">
                   {{ image.desc }}
                 </p>
-                <p>
+                <p data-cursor-hover >
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
                   pharetra neque ipsum, eu congue metus finibus in. Sed dolor
                   risus, tempus fermentum libero eget, consequat venenatis nisi.
