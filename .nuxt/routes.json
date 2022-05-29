@@ -1,5 +1,11 @@
 [
   {
+    "name": "gallery",
+    "path": "/gallery",
+    "component": "/Users/ludocomito/Desktop/personal_projects/ludocomito-photo-portfolio/pages/gallery.vue",
+    "chunkName": "pages/gallery"
+  },
+  {
     "name": "index",
     "path": "/",
     "component": "/Users/ludocomito/Desktop/personal_projects/ludocomito-photo-portfolio/pages/index.vue",

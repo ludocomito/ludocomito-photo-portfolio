@@ -1,11 +1,11 @@
 <template>
-  <div>
+  <div style="background:#9f8976">
     <!--style="background:#9f8976"-->
     <cursor-fx />
     <div
-      class="sticky top-0 z-10 flex flex-row justify-between w-full py-10 mx-auto mb-20  max-w-7xl"
+      class="sticky top-0 z-10 flex flex-row justify-between w-full py-10 mx-auto mb-20 max-w-7xl"
     >
-      <p class="text-2xl font-medium">LudovicoComito</p>
+      <p class="text-2xl font-medium text-white">LudovicoComito</p>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
@@ -34,7 +34,7 @@
           alt=""
         />
         <p
-          class="w-2/3 pt-32 font-light text-8xl serif-gambarino"
+          class="w-2/3 pt-32 font-light text-white text-8xl serif-gambarino"
           data-scroll
           data-scroll-speed="3"
         >
@@ -43,7 +43,7 @@
           <span class="font-medium">Rome</span>
         </p>
         <p
-          class="w-1/3 pt-3 text-sm border-t border-gray-800"
+          class="w-1/3 pt-3 text-sm text-white border-t border-white"
           data-scroll-speed="2"
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra
@@ -104,7 +104,7 @@
                 <button
                   data-cursor-hover
                   data-cursor-mix-blend-mode="difference"
-                  class="px-10 py-3 mt-10 text-black transition duration-300 border border-black  hover:text-white hover:bg-black w-max"
+                  class="px-10 py-3 mt-10 text-black transition duration-300 border border-black hover:text-white hover:bg-black w-max"
                 >
                   See more
                 </button>
@@ -121,7 +121,7 @@
                 <nuxt-img
                   data-aos-delay="150"
                   data-aos-duration="500"
-                  class="absolute object-cover transition duration-500 transform scale-100  image_preview hover:scale-110"
+                  class="absolute object-cover transition duration-500 transform scale-100 image_preview hover:scale-110"
                   style="height: 100%; width: 100%; object-position: 50% 50%"
                   ref="img1"
                   v-bind:src="image.link"
@@ -136,15 +136,15 @@
       <!-- FOOTER -->
       <footer class="text-gray-600 body-font" style="background: #9f8976">
         <div
-          class="container flex flex-col items-center px-5 py-8 mx-auto  sm:flex-row"
+          class="container flex flex-col items-center px-5 py-8 mx-auto sm:flex-row"
         >
           <a
-            class="flex items-center justify-center font-medium text-gray-900  title-font md:justify-start"
+            class="flex items-center justify-center font-medium text-gray-900 title-font md:justify-start"
           >
             <span class="ml-3 text-xl text-white">LudovicoComito</span>
           </a>
           <p
-            class="mt-4 text-sm text-white  sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0"
+            class="mt-4 text-sm text-white sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0"
           >
             © 2022 Ludovico Comito - special thanks to
             <a
@@ -154,7 +154,7 @@
             >
           </p>
           <span
-            class="inline-flex justify-center mt-4  sm:ml-auto sm:mt-0 sm:justify-start"
+            class="inline-flex justify-center mt-4 sm:ml-auto sm:mt-0 sm:justify-start"
           >
             <a
               class="ml-3 text-white"

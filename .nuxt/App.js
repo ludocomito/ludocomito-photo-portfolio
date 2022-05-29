@@ -10,6 +10,10 @@ import '../node_modules/fullpage-vue/src/fullpage.css'
 
 import '../node_modules/@nuxtjs/tailwindcss/dist/runtime/tailwind.css'
 
+import '../assets/css/gambarino.css'
+
+import '../assets/css/global.css'
+
 import _6f6c098b from './layouts/default.vue'
 
 const layouts = { "_default": sanitizeComponent(_6f6c098b) }
