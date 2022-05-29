@@ -1,25 +1,51 @@
 <template>
   <div>
+    <!--style="background:#9f8976"-->
     <cursor-fx />
-    <div class="sticky z-10 p-10 bg-trasparent w-full top-0">
-      <p class="font-medium text-2xl">LudovicoComito</p>
+    <div
+      class="sticky top-0 z-10 flex flex-row justify-between w-full py-10 mx-auto mb-20  max-w-7xl"
+    >
+      <p class="text-2xl font-medium">LudovicoComito</p>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <line x1="4" y1="12" x2="20" y2="12"></line>
+        <line x1="4" y1="6" x2="20" y2="6"></line>
+        <line x1="4" y1="18" x2="20" y2="18"></line>
+      </svg>
     </div>
     <div class="relative" data-scroll-container>
       <div
         data-scroll-section
-        class="max-w-7xl px-10 mx-auto py-32 flex flex-row space-x-5 items-end"
+        class="flex flex-row items-end px-10 py-32 mx-auto space-x-5 max-w-7xl"
       >
+        <img
+          src="https://i.ibb.co/Tm76x6J/11.jpg"
+          class="absolute top-0"
+          style="width: 600px"
+          alt=""
+        />
         <p
-          class="font-light text-8xl w-2/3 serif"
+          class="w-2/3 pt-32 font-light text-8xl serif-gambarino"
           data-scroll
-          data-scroll-speed="3" data-cursor-hover color-hover="#FFFFFF"
+          data-scroll-speed="3"
         >
-          👋 <br />
-          Hi, i'm a developer and
+          I'm a developer and
           <span class="font-medium">photographer</span> based in
           <span class="font-medium">Rome</span>
         </p>
-        <p class="w-1/3" data-scroll-speed="2">
+        <p
+          class="w-1/3 pt-3 text-sm border-t border-gray-800"
+          data-scroll-speed="2"
+        >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra
           neque ipsum, eu congue metus finibus in. Sed dolor risus, tempus
           fermentum libero eget, consequat venenatis nisi. Lorem ipsum dolor sit
@@ -29,7 +55,7 @@
       <div data-scroll-section>
         <div
           v-for="(image, index) in images"
-          class="page h-screen flex flex-col justify-center"
+          class="flex flex-col justify-center h-screen page"
           :style="{
             backgroundImage: isUltimo(index, images.length)
               ? createBackgroundString(image.bg, image.bg)
@@ -37,47 +63,65 @@
           }"
           v-bind:key="index"
         >
-          <div class="max-w-7xl mx-auto">
+          <div class="mx-auto max-w-7xl">
             <!-- <p
               data-aos-delay="300"
-              class="font-light font-serif absolute left-0 bottom-0 textStroked"
+              class="absolute bottom-0 left-0 font-serif font-light textStroked"
               style="font-size: 300px"
             >
               {{ image.desc[0] }}
             </p> -->
-            <div class="flex flex-row items-bottom items-start">
+            <div class="flex flex-row items-start items-bottom">
               <div
                 data-scroll
                 data-scroll-speed="3"
                 :class="isPari(index) ? 'order-0' : 'order-2'"
                 class="flex flex-col w-1/2 px-10"
               >
-                <p class="font-bold text-lg">
+                <p class="text-lg font-bold">
                   {{ image.desc }}
                 </p>
-                <p data-cursor-hover >
+                <p class="text-sm">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
                   pharetra neque ipsum, eu congue metus finibus in. Sed dolor
                   risus, tempus fermentum libero eget, consequat venenatis nisi.
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 </p>
-                <div class="flex flex-row mt-10">
-                  <div class="flex flex-col w-1/2">
+                <div class="flex flex-row mt-10 space-x-10">
+                  <div
+                    class="flex flex-col w-1/2 pt-4 border-t border-gray-800"
+                  >
                     <p class="font-bold">Località</p>
                     <p>Roma</p>
                   </div>
-                  <div class="flex flex-col w-1/2">
+                  <div
+                    class="flex flex-col w-1/2 pt-4 border-t border-gray-800"
+                  >
                     <p class="font-bold">Data realizzazione</p>
                     <p>Settembre 2021</p>
                   </div>
                 </div>
+                <button
+                  data-cursor-hover
+                  data-cursor-mix-blend-mode="difference"
+                  class="px-10 py-3 mt-10 text-black transition duration-300 border border-black  hover:text-white hover:bg-black w-max"
+                >
+                  See more
+                </button>
               </div>
-              <div class="mr-10 ml-10" style="height: 35rem; width: 40rem; overflow: hidden;
-    position: relative;">
+              <div
+                class="ml-10 mr-10"
+                style="
+                  height: 40rem;
+                  width: 40rem;
+                  overflow: hidden;
+                  position: relative;
+                "
+              >
                 <nuxt-img
                   data-aos-delay="150"
                   data-aos-duration="500"
-                  class="object-cover absolute image_preview"
+                  class="absolute object-cover transition duration-500 transform scale-100  image_preview hover:scale-110"
                   style="height: 100%; width: 100%; object-position: 50% 50%"
                   ref="img1"
                   v-bind:src="image.link"
@@ -88,6 +132,78 @@
           </div>
         </div>
       </div>
+
+      <!-- FOOTER -->
+      <footer class="text-gray-600 body-font" style="background: #9f8976">
+        <div
+          class="container flex flex-col items-center px-5 py-8 mx-auto  sm:flex-row"
+        >
+          <a
+            class="flex items-center justify-center font-medium text-gray-900  title-font md:justify-start"
+          >
+            <span class="ml-3 text-xl text-white">LudovicoComito</span>
+          </a>
+          <p
+            class="mt-4 text-sm text-white  sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0"
+          >
+            © 2022 Ludovico Comito - special thanks to
+            <a
+              href="https://www.behance.net/AlessandroDimitrio"
+              data-cursor-hover
+              >@AlessandrioDimitrio</a
+            >
+          </p>
+          <span
+            class="inline-flex justify-center mt-4  sm:ml-auto sm:mt-0 sm:justify-start"
+          >
+            <a
+              class="ml-3 text-white"
+              href="mailto:ludocomito@gmail.com"
+              data-cursor-hover
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                ></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </a>
+            <a
+              class="ml-3 text-white"
+              href="https://www.instagram.com/ludocomito/"
+              data-cursor-hover
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path
+                  d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                ></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+          </span>
+        </div>
+      </footer>
     </div>
   </div>
   <!-- <div>
@@ -152,21 +268,21 @@ export default {
   computed: {},
   methods: {
     animateOnScroll() {
-      this.$gsap.to(".image_preview", {
-        ease: "Power1.easeInOut",
-        scrollTrigger: {
-          trigger: ".image_preview",
-          start: "top",
-          end: "bottom",
-          animation: this.$gsap.to(".image_preview", {
-            transform: "scale(1.5)",
-          }),
-          scrub: 2,
-        },
-      });
+      // this.$gsap.to(".image_preview", {
+      //   ease: "Power1.easeInOut",
+      //   scrollTrigger: {
+      //     trigger: ".image_preview",
+      //     start: "top",
+      //     end: "bottom",
+      //     animation: this.$gsap.to(".image_preview", {
+      //       transform: "scale(1.5)",
+      //     }),
+      //     scrub: 2,
+      //   },
+      // });
     },
     createBackgroundString(color1) {
-      return `linear-gradient(180deg, white, ` + color1 + `, white )`;
+      return `linear-gradient(180deg, #f7f4ef, ` + color1 + `, #f7f4ef)`;
     },
     isUltimo(index, length) {
       if (index >= length - 1) {
@@ -195,7 +311,7 @@ export default {
           Math.floor(rgb[1]) +
           "," +
           Math.floor(rgb[2]) +
-          ",0.2)";
+          ",0.3)";
         resolve(rgbToText);
       });
     },
@@ -212,17 +328,17 @@ export default {
       },
       images: [
         {
-          link: "https://images.unsplash.com/photo-1562863010-5074d3465bf6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80",
+          link: "https://i.ibb.co/GRJqPS5/P4180045.jpg",
           desc: "Eventi",
           bg: "",
         },
         {
-          link: "https://images.unsplash.com/photo-1653665674648-7cc7fa657547?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80",
+          link: "https://i.ibb.co/mFzqrdT/P4180131.jpg",
           desc: "Natura",
           bg: "",
         },
         {
-          link: "https://images.unsplash.com/photo-1653569396310-56bf9b634ebb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80",
+          link: "https://i.ibb.co/9vVVR9s/P4180074.jpg",
           desc: "Architettura",
           bg: "",
         },
